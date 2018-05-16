@@ -1,0 +1,85 @@
+.widget {
+    margin: 0 -24px;
+    padding: 24px;
+    border-top: $divider;
+
+    &--half:last-of-type {
+        margin: 24px -24px 0;
+        padding: 24px;
+        border-top: $divider;
+    }
+}
+
+.card {
+    border: $divider;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: $color--lightgrey;
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+    background-color: $color--main;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+
+    svg {
+        fill: #fff;
+        width: 40px;
+    }
+}
+
+.result {
+    color: rgba(0,0,0,0.54);
+    font-size: 50px;
+    line-height: 1.2;
+}
+
+
+
+
+
+
+
+@include mq(md) {
+    .card__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .card {
+        flex: 0 0 31%;
+    }
+
+    .widget--row {
+        display: flex;
+    }
+
+    .widget--half {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin: -24px 0;
+        padding: 24px 0;
+        display: flex;
+        flex-direction: column;
+
+        &:first-of-type {
+            padding-right: 24px;
+        }
+
+        &:last-of-type {
+            margin: -24px 0;
+            padding: 24px 0 24px 24px;
+            border-top: 0;
+            border-left: $divider;
+        }
+    }
+}

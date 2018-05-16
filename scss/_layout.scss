@@ -1,0 +1,38 @@
+.site {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.site__content {
+    overflow: hidden;
+    height: 100%;
+}
+
+.content {
+    height: 100%;
+    padding: 24px 24px 0;
+    overflow-y: auto;
+}
+
+.content__header {
+    margin: -24px -24px 24px;
+}
+
+.innercontent {
+    min-height: 200vh;
+}
+
+
+@include mq(md) {
+    .site__content {
+        margin: 0 0 0 90px;
+    }
+
+
+    .content__header {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+}

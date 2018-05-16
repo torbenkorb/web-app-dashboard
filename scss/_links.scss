@@ -1,0 +1,26 @@
+a {
+    text-decoration: none;
+    transition: .2s;
+    color: $color--main;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+
+.button {
+    font: inherit;
+    background-color: $color--main;
+    border: 0;
+    border-radius: 6px;
+    color: #fff;
+    text-align: center;
+    padding: 12px 16px;
+    cursor: pointer;
+
+    &--secondary {
+        background-color: #b2b2b2;
+    }
+}
