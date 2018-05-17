@@ -44,8 +44,35 @@
 
 
 
+.chart {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
 
 
+
+
+.chart__switch {
+    margin-bottom: 24px;
+
+    button {
+        font: inherit;
+        font-size: 14px;
+        border: 0;
+        padding: 8px 16px;
+        border-radius: 24px;
+        outline: 0;
+        cursor: pointer;
+
+        &.active {
+            background-color: $color--secondary;
+            color: #fff;
+        }
+    }
+}
 
 
 @include mq(md) {
@@ -81,5 +108,11 @@
             border-top: 0;
             border-left: $divider;
         }
+    }
+
+    .chart__toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 }

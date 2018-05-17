@@ -14,6 +14,7 @@
     font-size: 14px;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .notification {
@@ -21,6 +22,7 @@
     padding: 5px 12px;
     margin-right: 12px;
     position: relative;
+    cursor: pointer;
 
     &.has-notification:before {
         content: "";
@@ -33,6 +35,32 @@
         right: 12px;
         background-color: $color--secondary;
         border: 2px solid $color--main;
+    }
+}
+
+.notification__dropdown {
+    display: none;
+    position: absolute;
+    right: 75%;
+    background: #fff;
+    padding: 24px;
+    top: 100%;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.24);
+    color: rgba(0,0,0,0.87);
+    width: 250px;
+
+    &.active {
+        display: block;
+    }
+}
+
+.notification__item {
+    padding: 12px 0;
+    border-bottom: $divider;
+
+    &:last-of-type {
+        border-bottom: 0;
     }
 }
 

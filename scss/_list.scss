@@ -37,6 +37,7 @@
 
 .list__date {
     margin-left: auto;
+    display: none;
 }
 
 .list__avatar {
@@ -51,4 +52,10 @@
 .list__meta {
     font-size: 14px;
     color: rgba(0,0,0,0.54);
+}
+
+@include mq(md) {
+    .list__date {
+        display: block;
+    }
 }
